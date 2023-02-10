@@ -1,0 +1,16 @@
+extends layout.pug 
+
+block content 
+  .container 
+    h1 Create New Note
+
+    form.form(action="/create" method="POST")
+    label Title 
+    input.input(type="text" name="title")
+
+
+    label Description 
+    textarea.input(name="description")
+
+
+    button.btn Create Note  
