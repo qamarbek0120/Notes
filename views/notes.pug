@@ -1,0 +1,11 @@
+extends layout.pug 
+
+
+block content 
+  div.container 
+    h1 All notes 
+    each note in notes 
+      .note-wrapper 
+        a.note(href="/notes/detail")=note 
+        .box 
+          a.delete(href="notes/detail") Delete 

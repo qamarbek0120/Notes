@@ -4,13 +4,15 @@ block content
   .container 
     h1 Create New Note
 
+    if error 
+      p.error Some Error occured. Please, try again! 
+
     form.form(action="/create" method="POST")
     label Title 
     input.input(type="text" name="title")
 
 
     label Description 
-    textarea.input(name="description")
+    textarea.input(type="text" name="description")
 
-
-    button.btn Create Note  
+    button.btn Create note 
