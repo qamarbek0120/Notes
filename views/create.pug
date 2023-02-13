@@ -7,12 +7,15 @@ block content
     if error 
       p.error Some Error occured. Please, try again! 
 
+    if success 
+      p.success Succesfully saved!
+
     form.form(action="/create" method="POST")
-    label Title 
-    input.input(type="text" name="title")
+      label Title: 
+      input.input(type="text" name="title")
 
 
-    label Description 
-    textarea.input(type="text" name="description")
+      label Description: 
+      textarea.input(type="text" name="description")
 
-    button.btn Create note 
+      button.btn Create note 
