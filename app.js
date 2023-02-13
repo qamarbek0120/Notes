@@ -44,6 +44,14 @@ app.get('/notes', (request, response)=>{
 
     })
 })
+
+app.get('/api/v1/notes', (request, response)=>{
+    fs.readFile('./data/notes.json', (error, data)=>{
+        if (error) throw error
+        const notes = JSON.parse(data)
+        response.json(notes)
+    })
+})
 app.get('/notes/:id', (request, response)=>{
 
     const id = request.params.id
